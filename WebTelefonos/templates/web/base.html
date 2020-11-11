@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaphyr | Venta de celulares</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  {% block css%}
+
+  {% endblock%}
+</head>
+
+<body>
+  <header>
+    <div class="header">
+
+      <div class="navbar">
+        <div class="logo">
+          <img src="{% static 'img/Logo.png' %}" alt="logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'celulares' %}">celulares</a></li>
+            <li><a href="../accesorios">Accesorios</a></li>
+            <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+            <li><a href="{% url 'contacto' %}">Contactenos</a></li>
+          </ul>
+          <img class ="carro" src="{% static 'img/CarroDeCompra.png' %}"  alt="carro">
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+
+  {% block contenido %}
+
+
+  {% endblock %}
+
+
+
+  <!----------------------------------->
+
+  <!----------------FOOTER------------------->
+
+  <footer class="footer">
+    <div class="container footer__caption">
+      <section class="download">
+
+        <div class="footer__copy">
+          <p class="copyright"> Zaphyr &copy; 2020 Todos los derechos reservados</p>
+
+          <a href="#" class="politica__privacidad politica__privacidad--margin">Politica de privacidad</a>
+          <a href="#" class="politica__privacidad ">Terminos y condiciones</a>
+        </div>
+      </section>
+
+      </form>
+      <div class="socialmedia">
+        <p class="socialmedia__legend">Siguenos en:</p>
+        <i class='socialmedia__icon bx bxl-facebook-circle'></i>
+        <i class='socialmedia__icon bx bxl-instagram'></i>
+      </div>
+      </section>
+    </div>
+
+  </footer>
+  <!----------------------------------->
+</body>
+
+{% block js%}
+
+{% endblock%}
+
+</html>

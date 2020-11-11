@@ -1,0 +1,13 @@
+{% extends "web/base.html" %} {% load static %} {% block contenido %}
+
+<form action="" method="POST">
+  <h2>Contacto</h2>
+
+  {% csrf_token %} {{ form }}
+  <br />
+  <cente
+    ><button action="submit" value="ENVIAR" id="boton">ENVIAR</button></cente
+  >
+</form>
+
+{{ mesaje }} {% endblock %}

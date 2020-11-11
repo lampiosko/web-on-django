@@ -1,0 +1,45 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+{% block contenido %}
+
+<main>
+    <section class="services">
+        <div class="container">
+            <article class="container-cards">
+                <div class="card">
+                    <img src="{% static 'img/telefonos/apple/iphone_11/iphone_11_black/1b.jpg' %}" width=90% >
+                        <div class="cards__text">
+                            <p class="card__list">iphone 11 negro</p>
+                            <p class="card__copy">antes: $619.990</p>
+                            <p class="card__copy">ahora: $519.990</p>
+                            <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                        </div>
+                </div>         
+                <div class="card">
+                    <img src="{% static 'img/telefonos/samsung/note_20/note_20_bronze/1b.png' %}" width=90%>
+                        <div class="cards__text">
+                            <p class="card__list">Note 20 bronce</p>
+                            <p class="card__copy">antes: $999.990</p>
+                            <p class="card__copy">ahora: $879.990</p>
+                            <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                        </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/telefonos/huawei/p_40_pro/p_40_pro_blue/1b.jpg' %}" width=90%>
+                        <div class="cards__text">
+                            <p class="card__list">p 40 pro blue</p>
+                            <p class="card__copy">antes: $849.990</p>
+                            <p class="card__copy">ahora: $789.990</p>
+                            <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                        </div>
+                </div>                                          
+            
+                              
+            </article>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

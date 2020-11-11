@@ -1,0 +1,33 @@
+{% extends "web/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<main>
+    <section class="services">
+
+        <div class="container">
+
+            <article class="container-cards">
+                
+                {% for producto in productos %}
+    
+                <div class="card">
+                    <img src="{{producto.imagen.url}}" width=100%>
+                    <div class="cards__text">
+                        <p class="card__list">{{producto.nombre}}</p>
+                        <p class="card__copy">${{producto.Precio}}</p>
+                        <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </article>
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

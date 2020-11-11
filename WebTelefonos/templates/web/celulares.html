@@ -1,0 +1,41 @@
+{% extends "web/base.html" %}
+{% load static  %}
+{% block contenido %}
+
+<main>
+        <section class="services">
+            <div class="container">
+               <article class="container-cards">
+                    <div class="card">
+                        <img src="{% static 'img/Samsung.png' %}" class="card__img">
+                        <div class="cards__text">
+                            <p class="card__list">Variedad de modelos</p>
+                            <h3 class="card__title">Samsung<span class="point">.</span></h3>
+                            <p class="card__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorum sit molestias ipsam at veritatis ut esse eius, dolor est!</p>
+                            <a href="../samsung" class="card__button">Acceder a catalogo &#10140;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Apple.png' %}" class="card__img">
+                        <div class="cards__text">
+                            <p class="card__list">Variedad de modelos</p>
+                            <h3 class="card__title">Apple<span class="point">.</span></h3>
+                            <p class="card__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorum sit molestias ipsam at veritatis ut esse eius, dolor est!</p>
+                            <a href="../apple" class="card__button">Acceder a catalogo &#10140;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Huawei.png' %}" class="card__img">
+                        <div class="cards__text">
+                            <p class="card__list">Variedad de modelos</p>
+                            <h3 class="card__title">Huawei<span class="point">.</span></h3>
+                            <p class="card__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorum sit molestias ipsam at veritatis ut esse eius, dolor est!</p>
+                            <a href="../huawei" class="card__button">Acceder a catalogo &#10140;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
