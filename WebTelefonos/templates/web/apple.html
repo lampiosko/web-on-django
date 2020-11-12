@@ -1,47 +1,30 @@
-{% extends "web/base.html" %}
-{% load static %}
-
+{% extends "web/base.html" %} 
+{% load static %} 
 {% block contenido %}
 
 <main>
-        <section class="services">
-            <div class="container">
-                <article class="container-cards">
+    <section class="services">
+        <div class="container">
+            <article class="container-cards">
+                {% load humanize%} 
+                {% for p in productos %} 
+                    {% if p.marca_id == 2 %}
                     <div class="card">
-                        <img src="{% static 'img/telefonos/apple/iphone_11/iphone_11_black/1b.jpg' %}" width=90% >
-                            <div class="cards__text">
-                                <p class="card__list">iphone 11 negro</p>
-                                <p class="card__copy">$619.990</p>
-                                <a href="../iphone_11_black" class="card__button">Mas informacion &#10140;</a>
-                            </div>
-                    </div>   
-                    <div class="card">
-                        <img src="{% static 'img/telefonos/apple/iphone_11/iphone_11_white/1w.jpg' %}" width=90%>
-                            <div class="cards__text">
-                                <p class="card__list">iphone 11 blanco</p>
-                                <p class="card__copy">$619.990</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
-                            </div>
-                    </div> 
-                    <div class="card">
-                        <img src="{% static 'img/telefonos/apple/iphone_se/iphone_se_black/1b.jpg' %}" width=90%>
-                            <div class="cards__text">
-                                <p class="card__list">iphone SE negro</p>
-                                <p class="card__copy">$389.990</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
-                            </div>
-                    </div> 
-                    <div class="card">
-                        <img src="{% static 'img/telefonos/apple/iphone_se/iphone_se_white/1w.jpg' %}" width=90%>
-                            <div class="cards__text">
-                                <p class="card__list">iphone SE blanco</p>
-                                <p class="card__copy">$389.990</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
-                            </div>
-                    </div>                               
-                </article>
-            </div>
-        </section>
+                        {% if p.imagen %}
+                        <img src="{{p.imagen.url}}" width="100%" />
+                        {% endif%}
+
+                        <div class="cards__text">
+                            <p class="card__list">{{p.nombre | capfirst}}</p>
+                            <p class="card__copy">Valor ${{p.Precio | intcomma}}</p>
+                            <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                        </div>
+                    </div>
+                    {% endif%} 
+                {% endfor %}
+            </article>
+        </div>
+    </section>
 </main>
 
 {% endblock %}
