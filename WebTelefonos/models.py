@@ -8,7 +8,7 @@ opciones_consultas = [
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)
-    correo = models.CharField(max_length=50)
+    correo = models.EmailField(max_length=50)
     telefono = models.CharField(max_length=9)
     tipo_consulta = models.IntegerField(choices=opciones_consultas)
     comentario = models.TextField()
