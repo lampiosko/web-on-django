@@ -12,6 +12,7 @@ def inicio(request):
     return render(request,'web/inicio.html')
 
 def celulares(request):
+    
     return render(request,'web/celulares.html')
 
 
