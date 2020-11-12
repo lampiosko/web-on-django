@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ContactoForms
-from .models import Contacto
+from .models import Contacto,Producto,Marca
 
 
 def base(request):  
@@ -24,13 +24,25 @@ def accesorios(request):
     return render(request,'web/accesorios.html')
 
 def samsung(request):
-    return render(request,'web/samsung.html')
+    productos = Producto.objects.all()
+    data = {
+        'productos' : productos
+    }
+    return render(request,'web/samsung.html',data)
 
 def huawei(request):
-    return render(request,'web/huawei.html')
+    productos = Producto.objects.all()
+    data = {
+        'productos' : productos
+    }
+    return render(request,'web/huawei.html',data)
 
 def apple(request):
-    return render(request,'web/apple.html')
+    productos = Producto.objects.all()
+    data = {
+        'productos' : productos
+    }
+    return render(request,'web/apple.html',data)
 
 def oferta(request):
     return render(request,'web/ofertas.html')
