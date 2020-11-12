@@ -12,11 +12,12 @@ def inicio(request):
     return render(request,'web/inicio.html')
 
 def celulares(request):
-    
+
     return render(request,'web/celulares.html')
 
 
 def sobrenos(request):
+    
     return render(request,'web/sobre_nos.html')
 
 def accesorios(request):
