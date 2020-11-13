@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ContactoForms
 from .models import Contacto,Producto,Marca
+import random
 
 
 def base(request):  
@@ -14,7 +15,6 @@ def inicio(request):
 def celulares(request):
 
     return render(request,'web/celulares.html')
-
 
 def sobrenos(request):
     
@@ -45,7 +45,11 @@ def apple(request):
     return render(request,'web/apple.html',data)
 
 def oferta(request):
-    return render(request,'web/ofertas.html')
+    productos = Producto.objects.all()
+    data = {
+        'productos' : productos
+    }
+    return render(request,'web/ofertas.html',data)
 
 
 
