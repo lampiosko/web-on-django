@@ -4,6 +4,8 @@ from django.forms import ValidationError
 
 class ContactoForms(forms.ModelForm):
 
+    #creacion de formulario contacto
+
     nombre = forms.CharField(min_length=5 ,max_length=20)
     
     class Meta:

@@ -1,5 +1,6 @@
 {% extends "web/base.html" %}
-
+<!----TEMPLATE CELULARES  DE LA PAGINA----!>
+<!----------------------------------->
 {% load static %}
 
 {% block contenido %}
@@ -22,7 +23,7 @@
                                 <p class="card__list"> {{p.nombre | capfirst}} </p>
                                 <p class="card__copy">Valor Actual  ${{p.Precio | intcomma}}</p>
                                 <p class="card__copy">Valor Ahora  ${{p.descuento | intcomma }}</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                                <a href="{% url 'inicio' %}" class="card__button">Mas informacion &#10140;</a>
                             </div>           
                         </div> 
                         {% endif%}
@@ -37,7 +38,7 @@
                                 <p class="card__list"> {{p.nombre | capfirst}} </p>
                                 <p class="card__copy">Valor Actual  ${{p.Precio | intcomma}}</p>
                                 <p class="card__copy">Valor Ahora  ${{p.descuento | intcomma }}</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                                <a href="{% url 'inicio' %}" class="card__button">Mas informacion &#10140;</a>
                             </div>           
                         </div> 
                         {% endif%}
@@ -52,7 +53,7 @@
                                 <p class="card__list"> {{p.nombre | capfirst}} </p>
                                 <p class="card__copy">Valor Actual  ${{p.Precio | intcomma}}</p>
                                 <p class="card__copy">Valor Ahora  ${{ p.descuento | intcomma }}</p>
-                                <a href="../samsung" class="card__button">Mas informacion &#10140;</a>
+                                <a href="{% url 'inicio' %}" class="card__button">Mas informacion &#10140;</a>
                             </div>           
                         </div> 
                         {% endif%}
