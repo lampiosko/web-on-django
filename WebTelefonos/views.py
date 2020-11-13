@@ -5,6 +5,7 @@ from .forms import ContactoForms
 from .models import Contacto,Producto,Marca
 import random
 
+#funciones que renvian las rutas segun la peticion (request)
 
 def base(request):  
     return render(request,'web/base.html') 
@@ -24,6 +25,7 @@ def accesorios(request):
     return render(request,'web/accesorios.html')
 
 def samsung(request):
+    #asignando una variable para los productos de las tablas en la BD
     productos = Producto.objects.all()
     data = {
         'productos' : productos
@@ -31,6 +33,7 @@ def samsung(request):
     return render(request,'web/samsung.html',data)
 
 def huawei(request):
+    #asignando una variable para los productos de las tablas en la BD
     productos = Producto.objects.all()
     data = {
         'productos' : productos
@@ -38,6 +41,7 @@ def huawei(request):
     return render(request,'web/huawei.html',data)
 
 def apple(request):
+    #asignando una variable para los productos de las tablas en la BD
     productos = Producto.objects.all()
     data = {
         'productos' : productos
@@ -45,6 +49,7 @@ def apple(request):
     return render(request,'web/apple.html',data)
 
 def oferta(request):
+    #asignando una variable para los productos de las tablas en la BD
     productos = Producto.objects.all()
     data = {
         'productos' : productos
@@ -54,10 +59,11 @@ def oferta(request):
 
 
 def contacto(request):
+    #asignando una variable para los productos de las tablas en la BD
     data = {
         'form': ContactoForms()
     } 
-
+    #Validacion de fromulario y se pueda enviar a la BD con los datos ingresados
     if request.method == 'POST':
         formulario = ContactoForms(data=request.POST)
         if formulario.is_valid():
