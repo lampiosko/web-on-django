@@ -35,6 +35,9 @@ class Producto(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT)
     imagen = models.ImageField(upload_to="productos", null=True)
     
+    def descuento(self):
+        descuento = int(self.Precio-self.Precio*0.2)
+        return descuento
     def __str__(self):
         return self.nombre
 
